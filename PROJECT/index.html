@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 48px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table id="board"></table>
+
+<script>
+    const SIZE = 3;
+    const board = document.getElementById('board');
+
+    function createBoard() {
+        for (let i = 0; i < SIZE; i++) {
+            const row = document.createElement('tr');
+            board.appendChild(row);
+
+            for (let j = 0; j < SIZE; j++) {
+                const cell = document.createElement('td');
+                cell.addEventListener('click', handleClick);
+                row.appendChild(cell);
+            }
+        }
+    }
+
+    let player = 'X';
+    let gameOver = false;
+
+    function handleClick() {
+        if (gameOver) return;
+
+        if (this.innerHTML === '') {
+            this.innerHTML = player;
+            checkWin();
+            player = player === 'X' ? 'O' : 'X';
+        }
+    }
+
+    function checkWin() {
+        // check rows and columns
+        for (let i = 0; i < SIZE; i++) {
+            if (
+                board.children[i].children[0].innerHTML !== '' &&
+                board.children[i].children[0].innerHTML === board.children[i].children[1].innerHTML &&
+                board.children[i].children[0].innerHTML === board.children[i].children[2].innerHTML
+            ) {
+                gameOver = true;
+                return;
+            }
+
+            if (
+                board.children[0].children[i].innerHTML !== '' &&
+                board.children[0].children[i].innerHTML === board.children[1].children[i].innerHTML &&
+                board.children[0].children[i].innerHTML === board.children[2].children[i].innerHTML
+            ) {
+                gameOver = true;
+                return;
+            }
+        }
+
+        // check diagonals
+        if (
+            board.children[0].children[0].innerHTML !== '' &&
+            board.children[0].children[0].innerHTML === board.children[1].children[1].innerHTML &&
+            board.children[0].children[0].innerHTML === board.children[2].children[2].innerHTML
+        ) {
+            gameOver = true;
+            return;
+        }
+
+        if (
+            board.children[0].children[2].innerHTML !== '' &&
+            board.children[0].children[2].innerHTML === board.children[1].children[1].innerHTML &&
+            board.children[0].children[2].innerHTML === board.children[2].children[0].innerHTML
+        ) {
+            gameOver = true;
+            return;
+        }
+    }
+
+    createBoard();
+</script>
+</body>

@@ -1,0 +1,81 @@
+div.main_vertical {
+    alignment: center;
+    background-color: black;
+    width: 280px;
+    height: 280px;
+    border: 10px solid black;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+div.main_diagonal {
+    alignment: center;
+    background-color: black;
+    width: 320px;
+    height: 280px;
+    border: 7px solid black;
+    border-right: 20px solid black;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+div.sq_black {
+    background-color: black;
+    height: 100%;
+    width: 40px;
+    display: inline-block;
+}
+
+div.sq_white {
+    background-color: white;
+    height: 100%;
+    width: 40px;
+    display: inline-block;
+}
+
+div.lines_left {
+    height: 100%;
+    width: 40px;
+
+    background: linear-gradient(45deg,
+    white 12.5%,
+    black 12.5%,
+    black 25%,
+    white 25%,
+    white 37.5%,
+    black 37.5%,
+    black 50%,
+    white 50%,
+    white 62.5%,
+    black 62.5%,
+    black 75%,
+    white 75%,
+    white 87.5%,
+    black 87.5%,
+    black 100%,
+    white 100%);
+}
+div.lines_right {
+    height: 100%;
+    width: 40px;
+
+    background: linear-gradient(-45deg,
+    white 12.5%,
+    black 12.5%,
+    black 25%,
+    white 25%,
+    white 37.5%,
+    black 37.5%,
+    black 50%,
+    white 50%,
+    white 62.5%,
+    black 62.5%,
+    black 75%,
+    white 75%,
+    white 87.5%,
+    black 87.5%,
+    black 100%,
+    white 100%);
+}

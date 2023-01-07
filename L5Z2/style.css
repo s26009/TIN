@@ -1,0 +1,75 @@
+.title {
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+    letter-spacing: 8px;
+    font-size: 25px;
+    padding: 10px;
+    color: #0a4b31;
+}
+
+.box {
+    line-height: 0;
+    height: 170px;
+    width: 300px;
+    margin: 0 auto 15px;
+    padding: 10px 17px 1px;
+    alignment: center;
+    background: rgba(255, 255, 255, 0.85) linear-gradient(180deg,
+    rgb(10, 75, 49) calc(30% - 1px),
+    rgba(192, 192, 192, 0) calc(30%),
+    rgba(189, 15, 15, 0) calc(70% + 1px)
+    );
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+p {
+    font-weight: bold;
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+    font-size: 15px;
+}
+
+p.sub_title {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+p.street {
+    padding-top: 20px;
+    line-height: 0;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #0a4b31;
+}
+
+p.postcode {
+    font-size: 13px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+p.email {
+    padding-top: 7px;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+    text-align: left;
+    font-style: italic;
+    color: #0a4b31;
+}
+
+p.phone {
+    font-weight: lighter;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.main {
+    text-align: center;
+    width: 100%;
+}
+
+body {
+    background-color: #e8e8e8;
+}

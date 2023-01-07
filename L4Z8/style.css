@@ -1,0 +1,30 @@
+.text {
+    width: 50%;
+    height: 200px;
+    font-weight: bold;
+    color: green;
+}
+
+.form {
+    padding: 5px;
+    width: 175px;
+}
+
+.form input:placeholder-shown {
+    border: 6px solid #4b4b4b;
+    background-color: white;
+}
+
+.form input {
+    border: 6px solid rgba(27, 107, 27, 0.63);
+    background-color: rgba(200, 255, 200, 0.74);
+}
+
+.form:has(input:focus) {
+
+    background: rgb(111, 255, 111);
+
+}
+
+
+
