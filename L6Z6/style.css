@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+table {
+    font-weight: bolder;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+td {
+    margin: 2px;
+    text-align: center;
+    background-color: #e8d99e;
+    border: black 1px solid;
+    border-radius: 2px;
+}
+
+div {
+
+}
