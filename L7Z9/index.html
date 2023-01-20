@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JS addEventListener Example</title>
-</head>
-<body>
-<button id="myBtn">Click Me</button>
+    <title>Countdown</title>
+    <script>
+        let countdown = 10;
+        let interval;
 
-<script>
-    const btn = document.getElementById("myBtn");
-    btn.addEventListener("click", function() {
-        alert("Przycisk został kliknięty");
-    });
-</script>
+        function startCountdown() {
+            interval = setInterval(() => {
+                countdown--;
+                if (countdown < 0) {
+                    clearInterval(interval);
+                    console.log("Koniec odliczania");
+                } else {
+                    console.log(countdown);
+                }
+            }, 1000);
+        }
+
+        function stopCountdown() {
+            console.log("Odliczanie zatrzymane");
+            clearInterval(interval);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+<div>
+    <button id="stop" onclick="stopCountdown()">Stop</button>
+</div>
 </body>
 </html>
