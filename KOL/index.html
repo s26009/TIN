@@ -1,16 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JS addEventListener Example</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="style.css">
+  <title>OLX - Skomplikowany szablon</title>
+  <!--  <link rel="stylesheet" href="style.css">-->
 </head>
 <body>
-<button id="myBtn">Click Me</button>
+<header>
+  <nav>
+    <ul>
+      <li><a href="/html/">Strona główna</a></li>
+      <li><a href="/html/">Ogłoszenia</a></li>
+      <li><a href="/html/">Kategorie</a></li>
+      <li><a href="/html/">Moje konto</a></li>
+    </ul>
+  </nav>
+  <div id="search-box">
+    <form>
+      <label for="search-query">Szukaj:</label>
+      <input type="text" id="search-query" name="search-query">
+      <input type="submit" value="Szukaj">
+    </form>
+  </div>
+</header>
+<main>
+  <section id="top-offers">
+    <h2>Najlepsze oferty</h2>
+    <article>
+      <img src="image1.jpg" alt="Zdjęcie oferty 1">
+      <h3>Oferty 1</h3>
+      <p>Opis oferty 1</p>
+      <table>
+        <tr>
+          <th>Cena</th>
+          <th>Lokalizacja</th>
+        </tr>
+        <tr>
+          <td>1000 zł</td>
+          <td>Warszawa</td>
+        </tr>
+      </table>
+      <a href="#">Szczegóły</a>
+    </article>
+    <article>
+      <img src="image2.jpg" alt="Zdjęcie oferty 2">
+      <h3>Oferty 2</h3>
+      <p>Opis oferty 2</p>
+      <table>
+        <tr>
+          <th>Cena</th>
+          <th>Lokalizacja</th>
+        </tr>
+        <tr>
+          <td>2000 zł</td>
+          <td>Kraków</td>
+        </tr>
+      </table>
+      <a href="#">Szczegóły</a>
+    </article>
+    <article>
+      <img src="image3.jpg" alt="Zdjęcie oferty 3">
+      <h3>Oferty 3</h3>
+      <p>Opis oferty 3</p>
+      <table>
+        <tr>
+          <th>Cena</th>
+          <th>Lokalizacja</th>
+        </tr>
+        <tr>
+          <td>3000 zł</td>
+          <td>Gdańsk</td>
+        </tr>
+      </table>
+      <a href="#">Szczegóły</a>
+    </article>
+  </section>
+  <aside>
+    <form id="login-form">
+      <h3>Zaloguj się</h3>
+      <label for="username"> Nazwa użytkownika:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password"> Hasło:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Zaloguj się">
+    </form>
+  </aside>
+  <section id="category-list">
+    <h2>Lista kategorii</h2>
+    <dl>
+      <dt>Motoryzacja</dt>
+      <dd>Samochody osobowe</dd>
+      <dd>Samochody ciężarowe</dd>
+      <dd>Motocykle</dd>
+      <dt>Nieruchomości</dt>
+      <dd>Mieszkania</dd>
+      <dd>Domy</dd>
+      <dd>Grunta</dd>
+      <dd>Biura</dd>
+      <dt>Elektronika</dt>
+      <dd>Komputery</dd>
+      <dd>Telefony komórkowe</dd>
+      <dd>RTV i AGD</dd>
+      <dt>Moda</dt>
+      <dd>Ubrania</dd>
+      <dd>Buty</dd>
+      <dd>Akcesoria</dd>
+      <dt>Zwierzęta</dt>
+      <dd>Psy</dd>
+      <dd>Koty</dd>
+      <dd>Akwarystyka</dd>
+      <dt>Usługi</dt>
+      <dd>Naprawy</dd>
+      <dd>Usługi kosmetyczne</dd>
+      <dd>Usługi transportowe</dd>
+    </dl>
+  </section>
+</main>
+<footer>
+  <p>Copyright 2020 - OLX</p>
 
-<script>
-  const btn = document.getElementById("myBtn");
-  btn.addEventListener("click", function() {
-    alert("Przycisk został kliknięty");
-  });
-</script>
+  <ul id="footer-links">
+    <li><a href="#">O nas</a></li>
+    <li><a href="#">Regulamin</a></li>
+    <li><a href="#">Polityka prywatności</a></li>
+  </ul>
+</footer>
 </body>
 </html>
