@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JS addEventListener Example</title>
+    <title>Window Size</title>
 </head>
 <body>
-<button id="myBtn">Click Me</button>
-
 <script>
-    const btn = document.getElementById("myBtn");
-    btn.addEventListener("click", function() {
-        alert("Przycisk został kliknięty");
-    });
+    function logWindowSize() {
+        console.log(`szerokość: ${window.innerWidth}, wysokość: ${window.innerHeight}`);
+    }
+    window.addEventListener("resize", logWindowSize);
 </script>
 </body>
 </html>
